@@ -2,18 +2,23 @@ import React from 'react'
 
 const Picker = () => {
   return (
-    <div className="backdrop-blur-md bg-transparent text-white w-[80%] rounded-2xl grid grid-cols-[90%_10%] row-auto items-center gap-5">
+    <div className="backdrop-blur-sm bg-transparent text-white w-[80%] rounded-2xl grid grid-cols-[90%_10%] row-auto items-center gap-5 border-2 border-white border-opacity-10">
     <div className="grid grid-cols-3 row-auto items-center gap-20 py-5 px-10 rounded-lg ">
-    <div className="w-full *:mb-2">
+    <div className="w-full *:mb-2 border-r border-white pr-5 border-opacity-20">
     <h1 className="font-medium text-lg">Location</h1>
     <div className="flex items-center justify-between w-full">
 
 <select id="countries" class="bg-transparent text-[#8F90A6] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full focus:outline-none">
 <option selected>Choose a country</option>
-<option value="US">United States</option>
-<option value="CA">Canada</option>
-<option value="FR">France</option>
-<option value="DE">Germany</option>
+  <option value="CA">Los Angeles, CA</option>
+  <option value="NY">New York City, NY</option>
+  <option value="CA">San Francisco, CA</option>
+  <option value="TX">Austin, TX</option>
+  <option value="FL">Miami, FL</option>
+  <option value="NC">Asheville, NC</option>
+  <option value="IL">Chicago, IL</option>
+  <option value="CO">Denver, CO</option>
+  <option value="HI">Hawaii, HI</option>
 </select>
 
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
@@ -30,10 +35,14 @@ const Picker = () => {
 
 <select id="countries" class="bg-transparent text-[#8F90A6] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full focus:outline-none">
 <option selected>Choose a Property</option>
-<option value="US">United States</option>
-<option value="CA">Canada</option>
-<option value="FR">France</option>
-<option value="DE">Germany</option>
+<option value="single-house">Single-family Home</option>
+<option value="townhouse">Townhouse</option>
+<option value="Apartment">Apartment</option>
+<option value="student-housing">Student Housing</option>
+<option value="senior-living">Senior Living</option>
+<option value="vacation-rental">Vacation Rental</option>
+<option value="condo">Condo</option>
+<option value="house">House</option>
 </select>
 
 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
@@ -43,16 +52,15 @@ const Picker = () => {
     
     </div>
     {/* <hr className=" bg-[#DCDCEB] h-[50px] w-[2px] rounded-full opacity-50"/> */}
-    <div className="w-full *:mb-2">
+    <div className="w-full *:mb-2 border-l border-white pl-5 border-opacity-20">
     <h1 className="font-medium text-lg">Price Range</h1>
     <div className="flex items-center justify-between w-full">
 
 <select id="countries" class="bg-transparent text-[#8F90A6] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full focus:outline-none">
 <option selected>Choose a Range</option>
-<option value="US">United States</option>
-<option value="CA">Canada</option>
-<option value="FR">France</option>
-<option value="DE">Germany</option>
+<option value="low">$200/night - $1,200/month</option>
+<option value="mid">$1,500/month - $2,000/month</option>
+<option value="high">$500,000 - $800,000</option>
 </select>
 
 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
