@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-transparent absolute top-0 z-50 text-white font-dmsans w-[90%] mx-auto right-0 left-0">
+    <div className="navbar bg-transparent text-white font-dmsans w-[90%] mx-auto right-0 left-0">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

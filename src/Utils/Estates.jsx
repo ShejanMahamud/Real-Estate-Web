@@ -1,13 +1,21 @@
-import React from 'react';
+import Aos from 'aos';
+import "aos/dist/aos.css";
+import React, { useEffect } from 'react';
 import { HiMiniCubeTransparent } from "react-icons/hi2";
 import { IoLocationSharp } from "react-icons/io5";
 
 const Estates = ({property}) => {
 
+    useEffect(() => {
+        Aos.init();
+        Aos.refresh();
+      }, []);
+    
+
 const {estate_title,segment_name,description,price,status,area,location,facilities,image} = property;
 
   return (
-    <div className='w-full  px-5 py-5 border border-[#DCDCEB] rounded-xl flex flex-col justify-between'>
+    <div className='w-full  px-5 py-5 border border-[#DCDCEB] rounded-xl flex flex-col justify-between' data-aos="fade-up">
                 <div  className='h-[200px] bg-no-repeat bg-cover bg-center rounded-xl flex justify-between items-start w-full px-5 py-5' style={{ backgroundImage: `url(${image})` }}>
                 <div className='bg-transparent backdrop-blur-sm rounded-md inline-flex items-center gap-1 px-3 py-2 border border-white border-opacity-30 text-xs text-white'><IoLocationSharp/><h1>{location}</h1></div>
                 <div className='bg-transparent backdrop-blur-sm rounded-md inline-flex items-center gap-1 px-3 py-2 border border-white border-opacity-30 text-xs text-white'><HiMiniCubeTransparent className='text-lg'/><h1>{status}</h1></div>

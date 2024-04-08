@@ -4,3 +4,13 @@
 :root {
   --swiper-theme-color: #1daeff;
 }
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.loginSwiper {
+  --swiper-theme-color: #fff;
+  --swiper-pagination-bottom: 0px;
+}

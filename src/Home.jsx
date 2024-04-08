@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Outlet, useLocation } from "react-router-dom";
 import Banner from './components/Banner';
 import Companies from './components/Companies';
 import Countries from './components/Countries';
@@ -8,6 +9,7 @@ import Navbar from './components/Navbar';
 
 const Home = () => {
 
+  const location = useLocation()
   const [properties, setProperties] = useState([]);
 
   useEffect(()=>{
@@ -16,15 +18,22 @@ const Home = () => {
     .then(data => setProperties(data))
   },[])
 
-  console.log(properties)
+  const showElement = [
+    "/login"
+  ].includes(location.pathname);
 
   return (
 	<div>
     <Navbar/>
-    <Banner/>
+    <Outlet/>
+    {
+      !showElement && <>
+      <Banner/>
     <Companies/>
     <Countries/>
     <EstateSection properties={properties}/>
+      </>
+    }
     <Footer/>
   </div>
   )
