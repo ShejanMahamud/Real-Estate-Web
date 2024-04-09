@@ -14,3 +14,29 @@ select {
   --swiper-theme-color: #fff;
   --swiper-pagination-bottom: 0px;
 }
+
+body {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #1daeff;
+  --sb-size: 8px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}

@@ -9,7 +9,7 @@
     "area": "2500 sq ft",
     "location": "Los Angeles, CA",
     "facilities": ["4 Bedrooms", "3 Bathrooms", "Backyard"],
-    "image": "https://i.ibb.co/N9JcpZj/home-1.jpg"
+    "image": "https://i.ibb.co/9g8SyTD/home-1.jpg"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "area": "3000 sq ft",
     "location": "New York City, NY",
     "facilities": ["Rooftop Terrace", "Modern Kitchen", "Fitness Center"],
-    "image": "https://i.ibb.co/TPfKLY9/home-2.jpg"
+    "image": "https://i.ibb.co/D5b1RFg/home-2.jpg"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "area": "1200 sq ft",
     "location": "San Francisco, CA",
     "facilities": ["Balcony", "Fitness Center", "Parking"],
-    "image": "https://i.ibb.co/yB5zc6N/home-3.jpg"
+    "image": "https://i.ibb.co/hC8ZvNd/home-3.jpg"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "area": "800 sq ft",
     "location": "Austin, TX",
     "facilities": ["Study Areas", "Community Events", "Laundry Facilities"],
-    "image": "https://i.ibb.co/317rFgY/home-4.jpg"
+    "image": "https://i.ibb.co/kXvrKcL/home-4.jpg"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "area": "1500 sq ft",
     "location": "Miami, FL",
     "facilities": ["Swimming Pool", "Fitness Center", "Restaurant"],
-    "image": "https://i.ibb.co/QJyH9hs/home-5.jpg"
+    "image": "https://i.ibb.co/GMFFgfN/home-5.jpg"
   },
   {
     "id": 6,
@@ -69,7 +69,7 @@
     "area": "1000 sq ft",
     "location": "Asheville, NC",
     "facilities": ["Private Patio", "Fireplace", "BBQ Grill"],
-    "image": "https://i.ibb.co/31PwgVY/home-6.jpg"
+    "image": "https://i.ibb.co/CMt1Ndn/home-6.jpg"
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
     "area": "1600 sq ft",
     "location": "Chicago, IL",
     "facilities": ["High-end Finishes", "City Views", "Gym"],
-    "image": "https://i.ibb.co/dPCBr3V/home-7.jpg"
+    "image": "https://i.ibb.co/RSkbBgb/home-7.jpg"
   },
   {
     "id": 8,
@@ -92,8 +92,8 @@
     "status": "Sale",
     "area": "2200 sq ft",
     "location": "Denver, CO",
-    "facilities": ["3 Bedrooms", "2.5 Bathrooms", "Backyard"],
-    "image": "https://i.ibb.co/48jqF76/pexels-get-lost-mike-10258631.jpg"
+    "facilities": ["3 Bedrooms", "2 Bathrooms", "Backyard"],
+    "image": "https://i.ibb.co/2jxJrRt/home-8.jpg"
   },
   {
     "id": 9,
@@ -105,6 +105,6 @@
     "area": "3000 sq ft",
     "location": "Hawaii, HI",
     "facilities": ["Infinity Pool", "Private Beach Access", "Outdoor Lounge"],
-    "image": "https://i.ibb.co/fYbhfbd/home-9.jpg"
+    "image": "https://i.ibb.co/rd6RZf9/home-9.jpg"
   }
 ]

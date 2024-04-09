@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { Outlet, useLocation } from "react-router-dom";
+import { AuthContext } from './auth/AuthProvider';
 import Banner from './components/Banner';
 import Companies from './components/Companies';
 import Countries from './components/Countries';
@@ -9,21 +10,24 @@ import Navbar from './components/Navbar';
 
 const Home = () => {
 
-  const location = useLocation()
-  const [properties, setProperties] = useState([]);
+  const location = useLocation();
 
-  useEffect(()=>{
-    fetch('data.json')
-    .then(res => res.json())
-    .then(data => setProperties(data))
-  },[])
+  const {loading} = useContext(AuthContext)
 
   const showElement = [
-    "/login"
+    "/login",
+    '/register'
   ].includes(location.pathname);
 
   return (
-	<div>
+
+    <>
+    {
+      loading ? <div className='w-full min-h-screen bg-transparent backdrop-blur-sm flex items-center justify-center'>
+        <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-[#1daeff]"></div>
+      </div>
+      :
+      <div>
     <Navbar/>
     <Outlet/>
     {
@@ -31,11 +35,13 @@ const Home = () => {
       <Banner/>
     <Companies/>
     <Countries/>
-    <EstateSection properties={properties}/>
+    <EstateSection/>
       </>
     }
     <Footer/>
   </div>
+    }
+    </>
   )
 }
 

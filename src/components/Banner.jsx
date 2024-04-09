@@ -7,7 +7,7 @@ import Picker from "../Utils/Picker";
 
 const Banner = () => {
   return (
-    <div className="w-full font-dmsans">
+    <div className="w-full font-dmsans relative z-10">
       <Swiper
         navigation={true}
         modules={[Navigation]}

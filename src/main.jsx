@@ -7,9 +7,14 @@ import {
 } from "react-router-dom";
 import AuthProvider from "./auth/AuthProvider";
 
+import AppDataProvider from "./AppDataProvider/AppDataProvider";
+import Register from "./auth/Register";
+import SignIn from "./auth/SignIn";
 import Home from './Home';
 import "./index.css";
-import Login from "./Login";
+import NotFound from "./NotFound/NotFound";
+import PrivateRoute from "./Private/PrivateRoute";
+import UpdateUser from "./User/UpdateUser";
 
 const router = createBrowserRouter([
   {
@@ -18,17 +23,27 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/login',
-        element: <Login/>
+        element: <SignIn/>
+      },
+      {
+        path: '/register',
+        element: <Register/>
+      },
+      {
+        path: '/update-profile',
+        element: <PrivateRoute><UpdateUser/></PrivateRoute>
       }
-    ]
+    ],
+    errorElement: <NotFound/>
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    <AppDataProvider>
     <AuthProvider>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </AuthProvider>
+    </AppDataProvider>
   </React.StrictMode>
 );
-

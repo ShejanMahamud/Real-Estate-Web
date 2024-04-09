@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#1daeff] px-10 lg:px-40 py-5 flex flex-col gap-16 bg-opacity-5">
+    <footer className="w-full bg-[#1daeff] px-10 lg:px-40 py-5 flex flex-col gap-8 bg-opacity-5">
       <div className="flex justify-between items-center">
 	  <div className='w-full flex items-center'>
         <img src="logo.png" alt="logo.png" className='w-14'/>
