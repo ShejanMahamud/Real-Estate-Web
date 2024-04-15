@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 import { FaGithubAlt } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import { IoEye, IoEyeOff } from "react-icons/io5";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
@@ -15,6 +15,7 @@ const SignIn = () => {
 
 const navigate = useNavigate();
 const [show, setShow] = useState(false);
+const location = useLocation()
 
 const {emailPassLogin,googleLogin,githubLogin} = useContext(AuthContext);
 
@@ -38,6 +39,7 @@ const handleEmailPassLogin = (e) => {
         googleLogin()
         .then(res=>{
             toast.success('Google Login Successfully!')
+            navigate(location.state ? location.state : '/')
         })
         .catch(error => {
             toast.error('Something went wrong!')

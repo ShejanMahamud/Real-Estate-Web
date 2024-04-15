@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../AppDataProvider/AppDataProvider';
+import 'react-loading-skeleton/dist/skeleton.css';
+import { DataContext } from '../Root';
 import Estates from '../Utils/Estates';
 
 const EstateSection = () => {
-  const { filteredProperties, rentProperties, sellProperties, seeAllProperties } = useContext(AppContext);
+  const { filteredProperties, rentProperties, sellProperties, seeAllProperties } = useContext(DataContext);
 
   return (
     <div className='w-[90%] mx-auto my-20 font-dmsans'>

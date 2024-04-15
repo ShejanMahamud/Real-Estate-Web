@@ -7,20 +7,26 @@ import {
 } from "react-router-dom";
 import AuthProvider from "./auth/AuthProvider";
 
-import AppDataProvider from "./AppDataProvider/AppDataProvider";
 import Register from "./auth/Register";
 import SignIn from "./auth/SignIn";
+import EstateDetails from "./components/EstateDetails";
 import Home from './Home';
 import "./index.css";
 import NotFound from "./NotFound/NotFound";
 import PrivateRoute from "./Private/PrivateRoute";
+import Root from "./Root";
 import UpdateUser from "./User/UpdateUser";
+import UserProfile from "./User/UserProfile";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home></Home>,
+    element: <Root></Root>,
     children: [
+      {
+        path: '/',
+        element: <Home/>
+      },
       {
         path: '/login',
         element: <SignIn/>
@@ -32,6 +38,14 @@ const router = createBrowserRouter([
       {
         path: '/update-profile',
         element: <PrivateRoute><UpdateUser/></PrivateRoute>
+      },
+      {
+        path: '/user-profile',
+        element: <PrivateRoute><UserProfile/></PrivateRoute>
+      },
+      {
+        path: '/property/:propertyId',
+        element: <PrivateRoute><EstateDetails/></PrivateRoute>
       }
     ],
     errorElement: <NotFound/>
@@ -40,10 +54,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AppDataProvider>
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
-    </AppDataProvider>
   </React.StrictMode>
 );

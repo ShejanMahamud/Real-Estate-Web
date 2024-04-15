@@ -7,8 +7,11 @@ import { HiOutlineLocationMarker } from 'react-icons/hi';
 import { HiMiniCubeTransparent } from "react-icons/hi2";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdFitnessCenter, MdPool, MdRestaurant } from 'react-icons/md';
+import { useNavigate } from 'react-router-dom';
 
 const Estates = ({ property }) => {
+
+    const navigate = useNavigate();
 
     const facilityIcons = {
         "4 Bedrooms": <FaBed />,
@@ -42,7 +45,7 @@ const Estates = ({ property }) => {
         Aos.refresh();
     }, []);
 
-    const { estate_title, segment_name, description, price, status, area, location, facilities, image } = property;
+    const { estate_title, segment_name, description, price, status, area, location, facilities, image,id } = property;
 
     return (
         <div className='w-full px-5 py-5 border border-[#DCDCEB] rounded-xl flex flex-col justify-between' data-aos="fade-up">
@@ -67,7 +70,7 @@ const Estates = ({ property }) => {
             <hr className='w-full border border-[#DDE0E5] my-5 border-opacity-50'/>
             <div className='w-full flex items-center justify-between'>
                 <span className='text-[#1DAEFF] font-bold uppercase px-3 py-2 rounded-md'>{price}</span>
-                <button className='bg-[#EBEEF2] text-gray-800 font-bold text-sm uppercase px-4 py-2 rounded-md'>View Details</button>
+                <button onClick={()=>navigate(`/property/${id}`)} className='bg-[#EBEEF2] text-gray-800 font-bold text-sm uppercase px-4 py-2 rounded-md'>View Details</button>
             </div>
         </div>
     );

@@ -12,7 +12,7 @@ const Picker = () => {
 <option selected>Choose a country</option>
   <option value="CA">Los Angeles, CA</option>
   <option value="NY">New York City, NY</option>
-  <option value="CA">San Francisco, CA</option>
+  <option value="CA">San Francisco, CA</option> 
   <option value="TX">Austin, TX</option>
   <option value="FL">Miami, FL</option>
   <option value="NC">Asheville, NC</option>

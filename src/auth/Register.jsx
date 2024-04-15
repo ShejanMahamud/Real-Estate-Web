@@ -118,7 +118,7 @@ useEffect(()=>{
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="w-full h-full flex flex-col items-center justify-center h-full">
+      <div className="w-full flex flex-col items-center justify-center h-full">
         <div className="bg-[#1252ae1f] rounded-full w-20 mx-auto p-3 border border-[#1252ae26] mb-5">
           <img src="logo.png" alt="logo.png" />
         </div>

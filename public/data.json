@@ -8,6 +8,7 @@
     "status": "Sale",
     "area": "2500 sq ft",
     "location": "Los Angeles, CA",
+    "detailed_location": "123 Main St, Los Angeles, CA, 90001, USA",
     "facilities": ["4 Bedrooms", "3 Bathrooms", "Backyard"],
     "image": "https://i.ibb.co/9g8SyTD/home-1.jpg"
   },
@@ -20,6 +21,7 @@
     "status": "Sale",
     "area": "3000 sq ft",
     "location": "New York City, NY",
+    "detailed_location": "456 Elm St, New York City, NY, 10001, USA",
     "facilities": ["Rooftop Terrace", "Modern Kitchen", "Fitness Center"],
     "image": "https://i.ibb.co/D5b1RFg/home-2.jpg"
   },
@@ -32,6 +34,7 @@
     "status": "Rent",
     "area": "1200 sq ft",
     "location": "San Francisco, CA",
+    "detailed_location": "789 Oak St, San Francisco, CA, 94102, USA",
     "facilities": ["Balcony", "Fitness Center", "Parking"],
     "image": "https://i.ibb.co/hC8ZvNd/home-3.jpg"
   },
@@ -44,6 +47,7 @@
     "status": "Rent",
     "area": "800 sq ft",
     "location": "Austin, TX",
+    "detailed_location": "101 College Ave, Austin, TX, 78705, USA",
     "facilities": ["Study Areas", "Community Events", "Laundry Facilities"],
     "image": "https://i.ibb.co/kXvrKcL/home-4.jpg"
   },
@@ -56,6 +60,7 @@
     "status": "Rent",
     "area": "1500 sq ft",
     "location": "Miami, FL",
+    "detailed_location": "555 Ocean Dr, Miami, FL, 33139, USA",
     "facilities": ["Swimming Pool", "Fitness Center", "Restaurant"],
     "image": "https://i.ibb.co/GMFFgfN/home-5.jpg"
   },
@@ -68,6 +73,7 @@
     "status": "Rent",
     "area": "1000 sq ft",
     "location": "Asheville, NC",
+    "detailed_location": "987 Maple Ln, Asheville, NC, 28801, USA",
     "facilities": ["Private Patio", "Fireplace", "BBQ Grill"],
     "image": "https://i.ibb.co/CMt1Ndn/home-6.jpg"
   },
@@ -80,6 +86,7 @@
     "status": "Sale",
     "area": "1600 sq ft",
     "location": "Chicago, IL",
+    "detailed_location": "321 Main St, Chicago, IL, 60601, USA",
     "facilities": ["High-end Finishes", "City Views", "Gym"],
     "image": "https://i.ibb.co/RSkbBgb/home-7.jpg"
   },
@@ -92,6 +99,7 @@
     "status": "Sale",
     "area": "2200 sq ft",
     "location": "Denver, CO",
+    "detailed_location": "741 Pine St, Denver, CO, 80202, USA",
     "facilities": ["3 Bedrooms", "2 Bathrooms", "Backyard"],
     "image": "https://i.ibb.co/2jxJrRt/home-8.jpg"
   },
@@ -104,6 +112,7 @@
     "status": "Rent",
     "area": "3000 sq ft",
     "location": "Hawaii, HI",
+    "detailed_location": "123 Beachfront Rd, Hawaii, HI, 96815, USA",
     "facilities": ["Infinity Pool", "Private Beach Access", "Outdoor Lounge"],
     "image": "https://i.ibb.co/rd6RZf9/home-9.jpg"
   }
