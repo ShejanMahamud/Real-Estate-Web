@@ -9,13 +9,12 @@ import { DataContext } from "../Root";
 import Feature from "../Utils/Feature";
 
 const EstateDetails = () => {
-  const [lat,setLat] = useState(null);
-  const [lon, setLon] = useState(null)
+
   const mapRef = useRef(null);
 
   const { propertyId } = useParams();
 
-  const [singleProperty, setSingleProperty] = useState([]);
+  const [singleProperty, setSingleProperty] = useState({});
 
   const { properties } = useContext(DataContext);
 
@@ -27,6 +26,7 @@ const EstateDetails = () => {
       setSingleProperty(matchedProperty);
     }
   }, []);
+  
 
   const {
     estate_title,
@@ -41,16 +41,6 @@ const EstateDetails = () => {
     id,
     detailed_location
   } = singleProperty;
-
-  useEffect(() => {
-    const loc = detailed_location;
-    fetch (`https://nominatim.openstreetmap.org/search?format=json&q=${loc}`)
-    .then(res => res.json())
-    .then(data => {
-      setLat(data[0].lat);
-      setLon(data[0].lon);
-    })
-  }, []);
 
   const position = [33.9173011, -118.41618589047789];
 
@@ -125,18 +115,18 @@ const EstateDetails = () => {
                 Property Size: <span className="font-semibold">{area}</span>
               </span>
               <span>
-                Property Type:{" "}
+                Property Type:
                 <span className="font-semibold">{segment_name}</span>
               </span>
               <span>
-                Property Status:{" "}
+                Property Status:
                 <span className="font-semibold">{status}</span>
               </span>
               <span>
                 Location: <span className="font-semibold">{location}</span>
               </span>
               <span>
-                Facilities:{" "}
+                Facilities:
                 {facilities &&
                   facilities.map((facility, index) => (
                     <span key={index} className="font-semibold">

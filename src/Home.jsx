@@ -8,14 +8,6 @@ import EstateSection from './components/EstateSection';
 
 const Home = () => {
 
-  // const showElement = [
-  //   "/login",
-  //   '/register',
-  //   '/property/'
-  // ].includes(location.pathname);
-
-  // const showElement2 = !location.pathname.startsWith('/property/');
-
   return (
     <>
       <Banner/>

@@ -8,37 +8,37 @@ export const DataContext = createContext(null);
 const Root = () => {
 
   const [properties, setProperties] = useState([]);
-  const [filteredProperties, setFilteredProperties] = useState([]);
+  // const [filteredProperties, setFilteredProperties] = useState([]);
 
   useEffect(() => {
     fetch('../public/data.json')
       .then((res) => res.json())
       .then((data) => {
         setProperties(data);
-        setFilteredProperties(data);
+        // setFilteredProperties(data);
       });
   }, []);
 
-  const rentProperties = () => {
-    const rentProps = properties.filter(property => property.status.includes('Rent'));
-    setFilteredProperties(rentProps); 
-}
+//   const rentProperties = () => {
+//     const rentProps = properties.filter(property => property.status.includes('Rent'));
+//     setFilteredProperties(rentProps); 
+// }
 
-  const sellProperties = () => {
-    const sellProps = properties.filter(property => property.status.includes('Sale'));
-    setFilteredProperties(sellProps); 
-}
+//   const sellProperties = () => {
+//     const sellProps = properties.filter(property => property.status.includes('Sale'));
+//     setFilteredProperties(sellProps); 
+// }
 
-const seeAllProperties = () => {
-    setFilteredProperties(properties); 
-}
+// const seeAllProperties = () => {
+//     setFilteredProperties(properties); 
+// }
 
   const appInfo = {
     properties,
-    rentProperties,
-    seeAllProperties,
-    sellProperties,
-    filteredProperties
+    // rentProperties,
+    // seeAllProperties,
+    // sellProperties,
+    // filteredProperties
   };
 
 const {loading} = useContext(AuthContext)

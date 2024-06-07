@@ -1,6 +1,5 @@
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
-import { Toaster } from 'react-hot-toast';
 import auth from './config/firebase.config';
 export const AuthContext = createContext(null);
 
@@ -44,10 +43,6 @@ const AuthProvider = ({children}) => {
   return (
     <AuthContext.Provider value={authInfo}>
         {children}
-        <Toaster
-  position="top-right"
-  reverseOrder={true}
-/>
     </AuthContext.Provider>
   )
 }

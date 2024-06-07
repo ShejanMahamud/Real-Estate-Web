@@ -20,7 +20,7 @@ const UpdateUser = () => {
     inputRef.current.focus();
   },[])
 
-  const handleUpdateProfile = (e) => {
+const handleUpdateProfile = (e) => {
 e.preventDefault();
 const email = e.target.email.value;
 const name = e.target.name.value;
